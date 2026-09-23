@@ -24,3 +24,16 @@ variable "availability_zones" {
     "ap-south-1b"
   ]
 }
+
+variable "kubernetes_version" {
+  description = "EKS Kubernetes version"
+  type        = string
+  default     = "1.34"
+}
+
+variable "my_ip_cidr" {
+  description = "Your public IP in CIDR form, e.g. 1.2.3.4/32 — restricts public API access"
+  type        = string
+  # No default on purpose — you must supply this via terraform.tfvars or -var
+  default = "122.160.71.219/32"
+}
