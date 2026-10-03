@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: flask-app
-          image: 292187657584.dkr.ecr.ap-south-1.amazonaws.com/zero-trust-preview-engine/app
+          image: 292187657584.dkr.ecr.ap-south-1.amazonaws.com/zero-trust-preview-engine/app:manual-test
           ports:
             - containerPort: 8080
           resources:
