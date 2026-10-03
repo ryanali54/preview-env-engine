@@ -35,5 +35,5 @@ variable "my_ip_cidr" {
   description = "Your public IP in CIDR form, e.g. 1.2.3.4/32 — restricts public API access"
   type        = string
   # No default on purpose — you must supply this via terraform.tfvars or -var
-  default = "122.160.71.219/32"
+  default = "106.219.150.137/32"
 }
