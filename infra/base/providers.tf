@@ -6,6 +6,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+
+    helm = {
+      source  = "hashicorp/helm"
+      version = "~> 3.0"
+    }
   }
 
   backend "local" {}
@@ -20,5 +25,11 @@ provider "aws" {
       ManagedBy   = "Terraform"
       Environment = "base"
     }
+  }
+}
+
+provider "helm" {
+  kubernetes = {
+    config_path = pathexpand("~/.kube/config")
   }
 }

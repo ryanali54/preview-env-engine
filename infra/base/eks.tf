@@ -25,10 +25,10 @@ module "eks" {
   eks_managed_node_groups = {
     default = {
       ami_type       = "AL2023_x86_64_STANDARD"
-      max_size       = 4
+      max_size       = 3
       min_size       = 1
-      desired_size   = 4
-      instance_types = ["t3.micro"]
+      desired_size   = 3
+      instance_types = ["t3.small"]
 
       additional_tags = {
         Name = "${var.project_name}-eks-node"
